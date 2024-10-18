@@ -2,6 +2,7 @@ import glob
 import gzip
 import json
 import math
+import yaml
 import os
 import os.path as osp
 import pickle
@@ -59,3 +60,6 @@ def save_pickle(data, output_path):
     file = open(output_path, "wb")
     pickle.dump(data, file)
 
+
+def load_yaml(path):
+    return yaml.safe_load(open(path))
