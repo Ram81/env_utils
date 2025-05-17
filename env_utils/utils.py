@@ -63,3 +63,8 @@ def save_pickle(data, output_path):
 
 def load_yaml(path):
     return yaml.safe_load(open(path))
+
+
+def save_image(image, path):
+    img = Image.fromarray(image)
+    img.save(path)
